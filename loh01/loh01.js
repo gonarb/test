@@ -10,25 +10,58 @@ let appData = {
     savings: false
 };
 
+// let i = 0;
+// let a;
+// let b;
+// while (i < 2) {
+//     a = prompt("Введите обязательную статью расходов в этом месяце", ''),
+//     b = +prompt("Во сколько обойдется?", '');
+//     i++;
+//     if ( (typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null 
+//          && (typeof(b))=== "number" && a != '' && b != '' && a.length < 50) {
+//          console.log("done");
+//          appData.expenses[a] = b;
+//     } else {
+//         i--;
+//         }
+// }
+
+// let a;
+// let b;
+// let i = 0;
+// do {
+//     a = prompt("Введите обязательную статью расходов в этом месяце", ''),
+//     b = +prompt("Во сколько обойдется?", '');
+//     i++;
+//     if ( (typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null 
+//           && (typeof(b))=== "number" && a != '' && b != '' && a.length < 50) {
+//           console.log("done");
+//           appData.expenses[a] = b;
+//     } else {
+//         i--;
+//         }
+// }
+// while (i < 2);
 
 
 for  (let i = 0; i < 2; i++) {
     let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
-        b = prompt("Во сколько обойдется?", '');
+        b = +prompt("Во сколько обойдется?", '');
 
-    if ((typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null 
-    && a != '' && b != '' && a.length < 50) {
+    if ( (typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null 
+        && (typeof(b))=== "number" && a != '' && b != '' && a.length < 50) {
         console.log("done");
         appData.expenses[a] = b;
     } else {
-        
-    };
+        i--;
+        };
     
 };
 
+
 appData.moneyPerDay = appData.budget / 30;
 
-alert("Vash dnevnoi budget: " +appData.appData.moneyPerDay);
+alert("Vash dnevnoi budget: " +appData.moneyPerDay);
 
 if (appData.moneyPerDay < 100) {
     console.log("Minimalnii uriven dostatka!")
@@ -39,6 +72,3 @@ if (appData.moneyPerDay < 100) {
 } else {
     console.log("Proizoshla oshibka!");
 }
-
-
-    
