@@ -124,15 +124,46 @@
 // promise.array.push(8,2,10);
 // console.log(promise['array']);
 
-var fruits = [];
-fruits.push('банан', 'яблоко', 'персик');
+// var fruits = [];
+// fruits.push('банан', 'яблоко', 'персик');
 
-console.log(fruits.length); // 3
-fruits[5] = 'манго';
-console.log(fruits[5]);             // 'манго'
-console.log(Object.keys(fruits));   // ['0', '1', '2', '5']
-console.log(fruits.length);         // 6
-console.log(fruits);
-console.log(Array.isArray(fruits));
-console.log(Array.observe(fruits));
+// console.log(fruits.length); // 3
+// fruits[5] = 'манго';
+// console.log(fruits[5]);             // 'манго'
+// console.log(Object.keys(fruits));   // ['0', '1', '2', '5']
+// console.log(fruits.length);         // 6
+// console.log(fruits);
+// console.log(Array.isArray(fruits));
 
+
+var arr = ['a', 'b', 'c'];
+
+Array.observe(arr, function(changes) {
+  console.log(changes);
+});
+arr[1] = 'B';
+
+
+let soldier = {
+    health: 400,
+    armor: 100
+};
+
+let john = {
+  health: 100
+};
+
+john.__proto__ = soldier;
+
+console.log(john);
+console.log(john.armor);
+
+
+function BigUser() {
+
+  this.name = "Вася";
+
+  return { name: "Godzilla" };  // <-- возвращает этот объект
+}
+
+alert( new BigUser().name );
