@@ -136,27 +136,27 @@
 // console.log(Array.isArray(fruits));
 
 
-var arr = ['a', 'b', 'c'];
+// var arr = ['a', 'b', 'c'];
 
-Array.observe(arr, function(changes) {
-  console.log(changes);
-});
-arr[1] = 'B';
+// Array.observe(arr, function(changes) {
+//   console.log(changes);
+// });
+// arr[1] = 'B';
 
 
-let soldier = {
-    health: 400,
-    armor: 100
-};
+// let soldier = {
+//     health: 400,
+//     armor: 100
+// };
 
-let john = {
-  health: 100
-};
+// let john = {
+//   health: 100
+// };
 
-john.__proto__ = soldier;
+// john.__proto__ = soldier;
 
-console.log(john);
-console.log(john.armor);
+// console.log(john);
+// console.log(john.armor);
 
 
 function BigUser() {
